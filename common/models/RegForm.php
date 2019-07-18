@@ -53,7 +53,7 @@ class RegForm extends Model
 
         if (!$this->validate()) {
 
-            var_dump($this->getErrors());die;
+            return false;
         }
 
         $user = new Member();
@@ -76,7 +76,7 @@ class RegForm extends Model
             return $user;
 
         }
-        else {var_dump('user');die;}
+        else return null;
     }
 
 }
